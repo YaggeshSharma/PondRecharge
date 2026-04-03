@@ -6,9 +6,9 @@ All datasets are preprocessed, spatially aligned, and resampled to a common reso
 
 ### Folder Structure
 
-- **climate/** → Precipitation, Temperature, ET, Aridity Index  
-- **hydrology/** → Groundwater Level, Infiltration, Surface Runoff, TWI  
-- **soil/** → Soil Moisture, Permeability, Soil Texture, Organic Content  
+- **climate/** → Precipitation, Temperature 
+- **hydrology/** → Groundwater Level, TWI  
+- **soil/** → Soil Moisture, Permeability, Soil  Organic Matter 
 - **land_surface/** → NDVI, Curve Number, Slope  
 
 ### Format
