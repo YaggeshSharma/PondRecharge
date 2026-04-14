@@ -1,47 +1,94 @@
-
-
-# PondRecharge
-
-Computational framework for pond-based groundwater recharge estimation using multi-source geospatial data and machine learning models in the Ramganga Basin, India.
+# Pond Recharge Modeling Framework
 
 ## Overview
-This repository contains the code, sample data, and processing workflow used to support the manuscript:
 
-**A Computational Framework for Basin-Scale Pond Recharge Estimation Using Multi-Source Geospatial Data**
+This repository provides a computational framework for basin-scale estimation of pond-based groundwater recharge using multi-source geospatial data and machine learning models.
 
-The workflow combines:
-- Google Earth Engine (GEE) scripts for pond inventory generation
-- Python scripts for preprocessing, visualization, and machine learning
-- geospatial factor tables and sample inputs for a minimal test run
+The framework is developed for the Ramganga Basin (India) and integrates:
+- Pond inventory from field surveys, government datasets, and remote sensing
+- Hydro-environmental predictors (10 thematic layers)
+- Statistical and machine learning models for recharge estimation
+- Spatial mapping of recharge potential zones
+
+This repository supports the study:
+
+**“A Computational Framework for Basin-Scale Pond Recharge Estimation Using Multi-Source Geospatial Data”**
+
+---
+
+## Study Workflow
+
+The computational framework consists of four major steps:
+
+1. **Pond Inventory Development**
+   - Integration of MGNREGA, Amrit Sarovar, remote sensing (NDPI, NDWI), and field validation
+   - Total 7,443 ponds mapped across the basin
+
+2. **Preparation of Recharge Determining Factors**
+   - 10 predictors used:
+     - Soil Moisture
+     - Permeability
+     - Rainfall
+     - Groundwater Level
+     - Soil Organic Matter
+     - Land Surface Temperature
+     - Turbidity Index
+     - Topographic Wetness Index (TWI)
+     - NDVI
+     - Curve Number
+
+3. **Model Development**
+   - Statistical models:
+     - Frequency Ratio (FR)
+     - Weight of Evidence (WOE)
+     - Shannon Entropy (SE)
+   - Machine learning models:
+     - Random Forest (RF)
+     - XGBoost (XGB)
+     - Gradient Boosting (GB)
+
+4. **Validation and Mapping**
+   - Validation using 23 monitoring sites (WLF method)
+   - AUC-based classification and regression validation
+   - Basin-scale recharge mapping
+
+---
 
 ## Repository Structure
 
-- `GEE_scripts/`  
-  Google Earth Engine scripts used for pond extraction and pond inventory preparation.
+- `GEE_scripts/`
+  Google Earth Engine scripts for pond extraction and geospatial data processing
 
-- `python_scripts/scripts/`  
-  Python scripts for raster preprocessing, KDE analysis, correlation analysis, and machine learning recharge modeling.
+- `python_scripts/scripts/`
+  Python scripts for:
+  - raster preprocessing
+  - KDE analysis
+  - correlation analysis
+  - machine learning modeling
 
-- `Recharge_Factors/`  
-  Processed geospatial attribute tables used as predictor inputs.
+- `Recharge_Factors/`
+  Processed geospatial predictor datasets used in modeling
 
-- `Pond_Points/`  
-  Pond point datasets used in the workflow.
+- `Pond_Points/`
+  Pond location dataset
 
-- `Pond_Shape/`  
-  Pond polygon / shape datasets used in the workflow.
+- `Pond_Shape/`
+  Pond polygon dataset
 
-- `example_data/`  
-  Minimal working example dataset for test execution.
+- `example_data/`
+  Minimal working dataset for testing the workflow
 
-- `example_output/`  
-  Example results generated from the test workflow.
+- `example_output/`
+  Output generated from example run
+
+---
 
 ## Software Requirements
 
-This repository was tested with:
-- Python 3.10+
-- Google Earth Engine
+The workflow uses open-source tools:
+
+- Python (>= 3.8)
+- Google Earth Engine (GEE)
 - pandas
 - numpy
 - matplotlib
@@ -50,7 +97,7 @@ This repository was tested with:
 - rasterio
 - geopandas
 
-Install dependencies using:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
