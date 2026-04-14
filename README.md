@@ -101,25 +101,30 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
-🔹 Instructions to Run Script
-Python Scripts (Main Workflow)
 
-Step 1: Install required packages
+## Instructions to Run Script
 
-pip install -r requirements.txt
+### GEE_scripts
 
-Step 2: Run the model script
+Step 1: Open Google Earth Engine (https://code.earthengine.google.com/)  
+Step 2: Copy scripts from the GEE_scripts folder  
+Step 3: Run the scripts to generate geospatial layers  
+Step 4: Export outputs for further analysis  
 
-python python_scripts/scripts/ml_models_recharge.py
+### python_scripts/scripts/
 
-Step 3: Output files will be generated in the example_output/ folder
+Step 1: Install required packages  
+pip install -r requirements.txt  
 
-🔹 Example Results
+Step 2: Run the model script  
+py python_scripts/scripts/ml_models_recharge.py  
 
-The following outputs are generated using the example dataset:
+Step 3: Output files will be generated in the example_output/ folder  
 
-Feature importance plots for XGBoost
-Feature importance plots for Gradient Boosting
-Feature importance plots for Random Forest
+## Example Results
+
+Figure 1: XGBoost average feature importance  
+Figure 2: Gradient Boosting average feature importance  
+Figure 3: Random Forest average feature importance  
 
 All results are available in the example_output/ folder.
