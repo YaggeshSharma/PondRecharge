@@ -101,3 +101,25 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+🔹 Instructions to Run Script
+Python Scripts (Main Workflow)
+
+Step 1: Install required packages
+
+pip install -r requirements.txt
+
+Step 2: Run the model script
+
+python python_scripts/scripts/ml_models_recharge.py
+
+Step 3: Output files will be generated in the example_output/ folder
+
+🔹 Example Results
+
+The following outputs are generated using the example dataset:
+
+Feature importance plots for XGBoost
+Feature importance plots for Gradient Boosting
+Feature importance plots for Random Forest
+
+All results are available in the example_output/ folder.
