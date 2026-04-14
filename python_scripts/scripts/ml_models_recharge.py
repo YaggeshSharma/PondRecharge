@@ -12,7 +12,7 @@ import os
 # =========================
 # Load data
 # =========================
-file_path = r"R:\Ponds_Sites.csv"
+file_path = r"example_data/sample_recharge_input.csv"
 data = pd.read_csv(file_path)
 
 # Features and target
@@ -26,7 +26,7 @@ X = data[features]
 y = data[target]
 
 # Output folder
-output_folder = r"R:\Phd_KHU\Research_work\IWMI\Moradabad_zone\New\Model_Outputs"
+output_folder = r"example_output"
 os.makedirs(output_folder, exist_ok=True)
 
 # =========================
@@ -78,7 +78,7 @@ for model_name, model_info in models.items():
     feature_importances = []
     best_params_list = []
 
-    for epoch in range(100):
+    for epoch in range(3):
         print(f"{model_name} - Epoch {epoch+1}/100")
 
         # Random split
@@ -103,7 +103,7 @@ for model_name, model_info in models.items():
             estimator=base_model,
             param_grid=model_info["params"],
             scoring='r2',
-            cv=5,
+            cv=2,
             verbose=0,
             n_jobs=-1
         )
@@ -145,7 +145,7 @@ for model_name, model_info in models.items():
 
     # Save metrics
     metrics_df = pd.DataFrame({
-        "Epoch": range(1, 101),
+        "Epoch": range(1, len(mse_list) + 1),
         "MSE": mse_list,
         "R2": r2_list
     })
