@@ -129,7 +129,7 @@ The following figures demonstrate the outputs generated using the example datase
 ![Figure 1](example_output/XGBoost_Average_Feature_Importance.png)
 
 ### Figure 2: Gradient Boosting average feature importance  
-![Figure 2](example_output/GradientBoost_Average_Feature_Importance.png)
+![Figure 2](example_output/GradientBoost Average Feature Importance.png)
 
 ### Figure 3: Random Forest average feature importance  
 ![Figure 3](example_output/RandomForest_Average_Feature_Importance.png)
