@@ -101,6 +101,7 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Instructions to Run Script
 
