@@ -123,8 +123,13 @@ Step 3: Output files will be generated in the example_output/ folder
 
 ## Example Results
 
-Figure 1: XGBoost average feature importance  
-Figure 2: Gradient Boosting average feature importance  
-Figure 3: Random Forest average feature importance  
+The following figures demonstrate the outputs generated using the example dataset:
 
-All results are available in the example_output/ folder.
+### Figure 1: XGBoost average feature importance  
+![Figure 1](example_output/XGBoost_Average_Feature_Importance.png)
+
+### Figure 2: Gradient Boosting average feature importance  
+![Figure 2](example_output/GradientBoost_Average_Feature_Importance.png)
+
+### Figure 3: Random Forest average feature importance  
+![Figure 3](example_output/RandomForest_Average_Feature_Importance.png)
